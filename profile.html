@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Muhammad Usman | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+:root {
+    --accent: #38bdf8;
+    --secondary: #818cf8;
+    --background: #0b1120;
+    --card: #151f32;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #0b1120;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #26334a;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h3 {
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    font-weight: 800;
+    margin: 12px 0;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 27px;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #94a3b8;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: var(--accent);
+    color: #07111f;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #7dd3fc;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #07111f;
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: var(--accent);
+}
+
+.about-content {
+    max-width: 850px;
+    color: #94a3b8;
+    line-height: 2;
+}
+
+.education-card, .project-card, .skill-card, .certificate-card {
+    background: var(--card);
+    border: 1px solid #26334a;
+    border-radius: 12px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.education-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.education-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: #94a3b8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill-card {
+    text-align: center;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.project-tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background: #243b53;
+    color: #7dd3fc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.certificate-card {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.contact-info {
+    max-width: 600px;
+    line-height: 2.5;
+    color: #94a3b8;
+}
+
+.contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #070c17;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">Usman<span>.</span></div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Home -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h3>Hello, I'm</h3>
+        <h1>Syed Muhammad Usman</h1>
+        <h2>Electrical & Computer Engineer</h2>
+
+        <p>
+            Passionate about Software Development, Artificial Intelligence,
+            Machine Learning, Embedded Systems, and Digital Hardware Design.
+            I enjoy building innovative solutions and transforming ideas
+            into practical projects.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn">Explore My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about-content">
+        <p>
+            I am a fresh Electrical & Computer Engineering graduate from
+            COMSATS University Islamabad, Abbottabad Campus.
+
+            I have hands-on experience in programming, digital system design,
+            embedded hardware, microcontrollers, AI/ML, and computer vision.
+
+            My academic projects have helped me develop practical problem-solving
+            skills and experience working with modern technologies.
+
+            I am continuously learning and looking for opportunities to
+            contribute, collaborate, and grow professionally.
+        </p>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <h2 class="section-title">My <span>Education</span></h2>
+
+    <div class="education-card">
+        <h3>BS Electrical & Computer Engineering</h3>
+        <p>COMSATS University Islamabad</p>
+        <p>Abbottabad Campus | Graduated: January 2026</p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">C Programming</div>
+        <div class="skill-card">C++</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">HTML & CSS</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">Neural Networks</div>
+        <div class="skill-card">Computer Vision</div>
+        <div class="skill-card">Verilog HDL</div>
+        <div class="skill-card">Digital System Design</div>
+        <div class="skill-card">PIC Microcontrollers</div>
+        <div class="skill-card">Embedded Systems</div>
+        <div class="skill-card">Database Management</div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:55px">
+        Engineering <span>Tools</span>
+    </h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">MATLAB</div>
+        <div class="skill-card">Proteus</div>
+        <div class="skill-card">Xilinx Vivado</div>
+        <div class="skill-card">MPLAB X IDE</div>
+        <div class="skill-card">MARS</div>
+        <div class="skill-card">VS Code</div>
+        <div class="skill-card">GitHub</div>
+        <div class="skill-card">Android Studio</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h3>E-Commerce Platform</h3>
+            <p>
+                Developed a responsive e-commerce platform with database
+                integration and AI-enabled features as my Final Year Project.
+            </p>
+            <span class="project-tag">Web Development</span>
+            <span class="project-tag">AI Integration</span>
+        </div>
+
+        <div class="project-card">
+            <h3>Security Surveillance System</h3>
+            <p>
+                Developed a camera-based surveillance prototype using
+                AI/ML, computer vision, and image processing for
+                automated detection and monitoring.
+            </p>
+            <span class="project-tag">AI / ML</span>
+            <span class="project-tag">Computer Vision</span>
+        </div>
+
+        <div class="project-card">
+            <h3>Smoke Detector Using PIC18</h3>
+            <p>
+                Designed a PIC18-based smoke detection system using
+                sensors and real-time alert generation.
+            </p>
+            <span class="project-tag">Embedded Systems</span>
+            <span class="project-tag">Microcontroller</span>
+        </div>
+
+        <div class="project-card">
+            <h3>Digital System Design</h3>
+            <p>
+                Designed and simulated digital logic circuits and
+                hardware modules using Verilog HDL, combinational,
+                and sequential logic.
+            </p>
+            <span class="project-tag">Verilog HDL</span>
+            <span class="project-tag">Hardware Design</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+    <h2 class="section-title">Certifications & <span>Activities</span></h2>
+
+    <div class="certificate-card">
+        Certificate of Organizer — Design to Manufacture Full Cycle
+        Development of State-of-the-Art Embedded Projects, IEEE Student Branch.
+    </div>
+
+    <div class="certificate-card">
+        Certificate of Participation — Job Hunting & Professional
+        Profile Development Workshop, IEEE COMSATS Abbottabad.
+    </div>
+
+    <div class="certificate-card">
+        Certificate of Appreciation — Modern Trends in Career Development,
+        Department of Computer Engineering, COMSATS Abbottabad.
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+
+    <div class="contact-info">
+        <p>Let's connect and explore opportunities!</p>
+
+        <p>📍 Location: Haripur, KPK, Pakistan</p>
+
+        <p>📧 Email:
+            <a href="mailto:syedmuhammadusman123456@gmail.com">
+                syedmuhammadusman123456@gmail.com
+            </a>
+        </p>
+
+        <p>📱 Phone: 0311 5859064</p>
+
+        <p>💼 LinkedIn:
+            <a href="https://www.linkedin.com/" target="_blank">
+                Connect on LinkedIn
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Syed Muhammad Usman. All Rights Reserved.</p>
+    <p>Designed with passion and technology.</p>
+</footer>
+
+</body>
+</html>
