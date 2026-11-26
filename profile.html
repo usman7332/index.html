@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Syed Muhammad Usman | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,18 +17,20 @@
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #0b1120;
-    color: #e5e7eb;
-}
-
 :root {
     --accent: #38bdf8;
     --secondary: #818cf8;
     --background: #0b1120;
     --card: #151f32;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: #e5e7eb;
+}
+
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -54,7 +57,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 25px;
 }
 
 nav a {
@@ -68,9 +71,22 @@ nav a:hover {
     color: var(--accent);
 }
 
+/* GENERAL SECTIONS */
+
 section {
     padding: 90px 8%;
 }
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: var(--accent);
+}
+
+/* HERO SECTION */
 
 .hero {
     min-height: 85vh;
@@ -107,6 +123,8 @@ section {
     font-size: 15px;
 }
 
+/* BUTTONS */
+
 .buttons {
     margin-top: 30px;
     display: flex;
@@ -115,6 +133,7 @@ section {
 }
 
 .btn {
+    display: inline-block;
     padding: 12px 25px;
     background: var(--accent);
     color: #07111f;
@@ -140,14 +159,7 @@ section {
     color: #07111f;
 }
 
-.section-title {
-    font-size: 34px;
-    margin-bottom: 35px;
-}
-
-.section-title span {
-    color: var(--accent);
-}
+/* ABOUT */
 
 .about-content {
     max-width: 850px;
@@ -155,7 +167,12 @@ section {
     line-height: 2;
 }
 
-.education-card, .project-card, .skill-card, .certificate-card {
+/* EDUCATION */
+
+.education-card,
+.project-card,
+.skill-card,
+.certificate-card {
     background: var(--card);
     border: 1px solid #26334a;
     border-radius: 12px;
@@ -178,7 +195,10 @@ section {
 
 .education-card p {
     color: #94a3b8;
+    margin-top: 5px;
 }
+
+/* SKILLS */
 
 .skills-grid {
     display: grid;
@@ -191,6 +211,8 @@ section {
     font-weight: 500;
     color: #cbd5e1;
 }
+
+/* PROJECTS */
 
 .projects-grid {
     display: grid;
@@ -212,6 +234,7 @@ section {
 .project-tag {
     display: inline-block;
     margin-top: 15px;
+    margin-right: 5px;
     padding: 5px 10px;
     background: #243b53;
     color: #7dd3fc;
@@ -219,13 +242,22 @@ section {
     font-size: 12px;
 }
 
+.project-link {
+    margin-top: 22px;
+}
+
+/* CERTIFICATIONS */
+
 .certificate-card {
     margin-bottom: 15px;
     color: #cbd5e1;
+    line-height: 1.8;
 }
 
+/* CONTACT */
+
 .contact-info {
-    max-width: 600px;
+    max-width: 650px;
     line-height: 2.5;
     color: #94a3b8;
 }
@@ -235,6 +267,12 @@ section {
     text-decoration: none;
 }
 
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
 footer {
     padding: 25px;
     text-align: center;
@@ -243,7 +281,10 @@ footer {
     font-size: 13px;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media(max-width: 768px) {
+
     nav {
         flex-direction: column;
         gap: 15px;
@@ -266,15 +307,25 @@ footer {
     .hero {
         min-height: 75vh;
     }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
+<!-- NAVIGATION -->
+
 <nav>
     <div class="logo">Usman<span>.</span></div>
+
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -285,11 +336,17 @@ footer {
     </ul>
 </nav>
 
-<!-- Home -->
+
+<!-- HOME SECTION -->
+
 <section class="hero" id="home">
+
     <div class="hero-content">
+
         <h3>Hello, I'm</h3>
+
         <h1>Syed Muhammad Usman</h1>
+
         <h2>Electrical & Computer Engineer</h2>
 
         <p>
@@ -300,17 +357,32 @@ footer {
         </p>
 
         <div class="buttons">
-            <a href="#projects" class="btn">Explore My Work</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+            <a href="#projects" class="btn">
+                Explore My Work
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- About -->
+
+<!-- ABOUT SECTION -->
+
 <section id="about">
-    <h2 class="section-title">About <span>Me</span></h2>
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
 
     <div class="about-content">
+
         <p>
             I am a fresh Electrical & Computer Engineering graduate from
             COMSATS University Islamabad, Abbottabad Campus.
@@ -324,25 +396,43 @@ footer {
             I am continuously learning and looking for opportunities to
             contribute, collaborate, and grow professionally.
         </p>
+
     </div>
+
 </section>
 
-<!-- Education -->
+
+<!-- EDUCATION SECTION -->
+
 <section id="education">
-    <h2 class="section-title">My <span>Education</span></h2>
+
+    <h2 class="section-title">
+        My <span>Education</span>
+    </h2>
 
     <div class="education-card">
+
         <h3>BS Electrical & Computer Engineering</h3>
+
         <p>COMSATS University Islamabad</p>
+
         <p>Abbottabad Campus | Graduated: January 2026</p>
+
     </div>
+
 </section>
 
-<!-- Skills -->
+
+<!-- SKILLS SECTION -->
+
 <section id="skills">
-    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <h2 class="section-title">
+        Technical <span>Skills</span>
+    </h2>
 
     <div class="skills-grid">
+
         <div class="skill-card">Python</div>
         <div class="skill-card">C Programming</div>
         <div class="skill-card">C++</div>
@@ -357,13 +447,18 @@ footer {
         <div class="skill-card">PIC Microcontrollers</div>
         <div class="skill-card">Embedded Systems</div>
         <div class="skill-card">Database Management</div>
+
     </div>
 
+
     <h2 class="section-title" style="margin-top:55px">
+
         Engineering <span>Tools</span>
+
     </h2>
 
     <div class="skills-grid">
+
         <div class="skill-card">MATLAB</div>
         <div class="skill-card">Proteus</div>
         <div class="skill-card">Xilinx Vivado</div>
@@ -372,109 +467,230 @@ footer {
         <div class="skill-card">VS Code</div>
         <div class="skill-card">GitHub</div>
         <div class="skill-card">Android Studio</div>
+
     </div>
+
 </section>
 
-<!-- Projects -->
+
+<!-- PROJECTS SECTION -->
+
 <section id="projects">
-    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <h2 class="section-title">
+        Featured <span>Projects</span>
+    </h2>
 
     <div class="projects-grid">
 
+
+        <!-- E-COMMERCE PROJECT -->
+
         <div class="project-card">
+
             <h3>E-Commerce Platform</h3>
+
             <p>
                 Developed a responsive e-commerce platform with database
                 integration and AI-enabled features as my Final Year Project.
             </p>
-            <span class="project-tag">Web Development</span>
-            <span class="project-tag">AI Integration</span>
+
+            <span class="project-tag">
+                Web Development
+            </span>
+
+            <span class="project-tag">
+                AI Integration
+            </span>
+
+            <div class="project-link">
+
+                <a href="https://github.com/usman7332/Final-Year-Project.git"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn">
+
+                    View Source Code →
+
+                </a>
+
+            </div>
+
         </div>
 
+
+        <!-- SECURITY SURVEILLANCE PROJECT -->
+
         <div class="project-card">
+
             <h3>Security Surveillance System</h3>
+
             <p>
                 Developed a camera-based surveillance prototype using
                 AI/ML, computer vision, and image processing for
                 automated detection and monitoring.
             </p>
-            <span class="project-tag">AI / ML</span>
-            <span class="project-tag">Computer Vision</span>
+
+            <span class="project-tag">
+                AI / ML
+            </span>
+
+            <span class="project-tag">
+                Computer Vision
+            </span>
+
         </div>
 
+
+        <!-- SMOKE DETECTOR PROJECT -->
+
         <div class="project-card">
+
             <h3>Smoke Detector Using PIC18</h3>
+
             <p>
                 Designed a PIC18-based smoke detection system using
                 sensors and real-time alert generation.
             </p>
-            <span class="project-tag">Embedded Systems</span>
-            <span class="project-tag">Microcontroller</span>
+
+            <span class="project-tag">
+                Embedded Systems
+            </span>
+
+            <span class="project-tag">
+                Microcontroller
+            </span>
+
         </div>
 
+
+        <!-- DIGITAL SYSTEM DESIGN PROJECT -->
+
         <div class="project-card">
+
             <h3>Digital System Design</h3>
+
             <p>
                 Designed and simulated digital logic circuits and
                 hardware modules using Verilog HDL, combinational,
                 and sequential logic.
             </p>
-            <span class="project-tag">Verilog HDL</span>
-            <span class="project-tag">Hardware Design</span>
+
+            <span class="project-tag">
+                Verilog HDL
+            </span>
+
+            <span class="project-tag">
+                Hardware Design
+            </span>
+
         </div>
 
+
     </div>
+
 </section>
 
-<!-- Certifications -->
+
+<!-- CERTIFICATIONS SECTION -->
+
 <section id="certifications">
-    <h2 class="section-title">Certifications & <span>Activities</span></h2>
+
+    <h2 class="section-title">
+        Certifications & <span>Activities</span>
+    </h2>
 
     <div class="certificate-card">
+
         Certificate of Organizer — Design to Manufacture Full Cycle
-        Development of State-of-the-Art Embedded Projects, IEEE Student Branch.
+        Development of State-of-the-Art Embedded Projects,
+        IEEE Student Branch, CUI Abbottabad.
+
     </div>
 
     <div class="certificate-card">
+
         Certificate of Participation — Job Hunting & Professional
         Profile Development Workshop, IEEE COMSATS Abbottabad.
+
     </div>
 
     <div class="certificate-card">
+
         Certificate of Appreciation — Modern Trends in Career Development,
         Department of Computer Engineering, COMSATS Abbottabad.
+
     </div>
+
 </section>
 
-<!-- Contact -->
+
+<!-- CONTACT SECTION -->
+
 <section id="contact">
-    <h2 class="section-title">Get In <span>Touch</span></h2>
+
+    <h2 class="section-title">
+        Get In <span>Touch</span>
+    </h2>
 
     <div class="contact-info">
-        <p>Let's connect and explore opportunities!</p>
 
-        <p>📍 Location: Haripur, KPK, Pakistan</p>
+        <p>
+            Let's connect and explore opportunities!
+        </p>
 
-        <p>📧 Email:
+        <p>
+            📍 Location: Haripur, KPK, Pakistan
+        </p>
+
+        <p>
+            📧 Email:
             <a href="mailto:syedmuhammadusman123456@gmail.com">
                 syedmuhammadusman123456@gmail.com
             </a>
         </p>
 
-        <p>📱 Phone: 0311 5859064</p>
+        <p>
+            📱 Phone: 0311 5859064
+        </p>
 
-        <p>💼 LinkedIn:
-            <a href="https://www.linkedin.com/" target="_blank">
+        <p>
+            💼 LinkedIn:
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">
                 Connect on LinkedIn
             </a>
         </p>
+
+        <p>
+            💻 GitHub:
+            <a href="https://github.com/usman7332"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visit My GitHub
+            </a>
+        </p>
+
     </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 Syed Muhammad Usman. All Rights Reserved.</p>
-    <p>Designed with passion and technology.</p>
+
+    <p>
+        © 2026 Syed Muhammad Usman. All Rights Reserved.
+    </p>
+
+    <p>
+        Designed with passion and technology.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
